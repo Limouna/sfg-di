@@ -15,8 +15,8 @@ public class SfgDiApplication {
 
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		MyController myController = (MyController) ctx.getBean("myController"); //The beans start with lowercase by default in spring
-		String greeting = myController.sayHello();
-		System.out.println(greeting);
+		System.out.println("---Primary bean");
+		System.out.println(myController.sayHello());
 
 		System.out.println("---Property");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
